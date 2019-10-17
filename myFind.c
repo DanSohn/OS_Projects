@@ -1,3 +1,8 @@
+/*
+Implemented a C program that replicates a small subset of the functionality of the 'find' system utility. The output is identifical to executing 'find . -type f'
+Finds all files in currennt directory and prints them one line at a time to standard output.
+*/
+
 #include <stdio.h>
 #include <dirent.h>
 #include <string.h>

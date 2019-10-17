@@ -15,3 +15,7 @@ Simple Operating System Projects in C/C++, implementing paging, CPU scheduling, 
     How to compile and run:
         Script:
             ./scan.sh <extension> <N>
+            
+3.  myFind.c
+    Implemented a C program that replicates a small subset of the functionality of the 'find' system utility. The output is identifical to executing 'find . -type f'
+    Finds all files in currennt directory and prints them one line at a time to standard output.
