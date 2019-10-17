@@ -9,12 +9,16 @@ Simple Operating System Projects in C/C++, implementing paging, CPU scheduling, 
         ./myWc <file.txt>
 
 2.  Find the N largest files in a directory.
+    scan.sh and scan.cpp
     Implemented using a bash script and C++.
     Input the suffix of the file (ex. .jpg) and the number of files to display (N).
     The current and all subdirectories are searched to find all files that end in the specified suffix and the N largest files are displayed. 
     How to compile and run:
         Script:
             ./scan.sh <extension> <N>
+        CPP:
+            g++ scan.cpp -o scan
+            ./scan <extension> <N>
             
 3.  myFind.c
     Implemented a C program that replicates a small subset of the functionality of the 'find' system utility.
@@ -36,8 +40,37 @@ Simple Operating System Projects in C/C++, implementing paging, CPU scheduling, 
         g++ sum.cpp -o sum
         ./sum <file.txt> <T>
         
+5.  primes.cpp
+    Improving a C program provided by Professor Federl, by making it multi-threads using pthreads. Program takes in a single command arg "N" which determines number of threads allowed to run at a time.
+    Counts number of primes from standard input
+    Compile with:
+        g++ -lpthread primes.cpp -02 -o count -lm      
+        ./count < <test.txt> (where test.txt contains numbers)
         
-        
+6.  scheduler.cpp
+    Simulates execution of processes using non-preemptive shortest-job-first and preemptive round-robin.
+    Accepts 3 arguments:
+        1) name of config file
+        2) name of algorithm ('RR' or 'SJF')
+        3) time quantum for RR algorithm (Don't add if SJF)
+    
+    Sample Config file:
+    1 10
+    3 5
+    5 3
+    
+    How to compile and run:
+        g++ scheduler.cpp -o scheduler
+        ./scheduler <config.txt> <RR/SJF> <Quantum>
+    
+    
+    
+    
+    
+    
+    
+    
+    
         
         
         
