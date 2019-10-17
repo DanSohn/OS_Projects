@@ -1,14 +1,30 @@
+/*
+A multi-threaded solution for computing the sum of a large array of integers.
+Takes two arguments from command line:
+    1. Name of file containing the integers (one number per line)
+    2. <T> is number of threads to be created
+Built under assumptions that:
+    input contains N integers where N <= 1 000 000
+    T <= N
+*/
+
 #include <iostream>
 #include <fstream>
+
 using namespace std;
+
+
 int totalSum=0;
 int numArr[1000000];
+
+
 struct sum_struct
 {
 	int first;
 	int last;
 	int sum;
 };
+
 void* adder(void* arg)
 {
 	//cast arg from void* to desired type
@@ -63,34 +79,6 @@ int main(int argc, char * argv[])
 
 
   for(int i=0;i<numThreads;i++){
-	  //cout<<"New place";
-	  //cout<<"Array Size: "<<arrSize<<endl;
-	  //cout<<"Number of threads: "<<numThreads<<endl;
-	  /*if (i < (arrSize%numThreads)){//first N%T groups 
-		  cout<<"First version"<<endl;
-		  args[i].first = i*(arrSize/numThreads+1);
-		  args[i].last = (i+1)*(arrSize/numThreads + 1)-1;
-			  //copy numArr into args[i].smallArr[count]
-			  //increase count 
-	          std::copy(numArr + args[i].first, numArr + (args[i].last+1), args[i].smallArr);
-		 
-		  pthread_create(&tid[i], NULL, adder, &args[i]);
-
-	  }else{
-		  cout<<"Second version"<<endl;
-		  cout<<"last:"<<args[i].last<<endl;
-		  args[i].first = (arrSize%numThreads)*(arrSize/numThreads) + (i-arrSize%numThreads)*(arrSize/numThreads)+1;
-		  args[i].last = (arrSize%numThreads)*(arrSize/numThreads) + (i + 1 -arrSize%numThreads)*(arrSize/numThreads);
-		  cout<<"First and last:"<<args[i].first<<"  "<<args[i].last<<endl;
-		  std::copy(numArr + args[i].first, numArr + (args[i].last+1), args[i].smallArr);
-		cout<<"Last element again:"<<args[i].last<<endl;
-		  pthread_create(&tid[i], NULL, adder, &args[i]);
-
-		
-	  }
-	  Please respect this mistakes that I made it took time and i shed a tear over my mistakes I want to cry
-	  */
-
 	  if(i==0){ //our first amount
 		  args[i].first = i;
 		  args[i].last = args[i].first + arrSize/numThreads;

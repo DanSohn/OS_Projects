@@ -17,5 +17,27 @@ Simple Operating System Projects in C/C++, implementing paging, CPU scheduling, 
             ./scan.sh <extension> <N>
             
 3.  myFind.c
-    Implemented a C program that replicates a small subset of the functionality of the 'find' system utility. The output is identifical to executing 'find . -type f'
+    Implemented a C program that replicates a small subset of the functionality of the 'find' system utility.
+    The output is identifical to executing 'find . -type f'.
     Finds all files in currennt directory and prints them one line at a time to standard output.
+    How to compile and run:
+        gcc myFind.c -o myFind
+        ./myFind
+    
+4.  sum.cpp
+    A multi-threaded solution for computing the sum of a large array of integers.
+    Takes two arguments from command line:
+        1. Name of file containing the integers (one number per line)
+        2. <T> is number of threads to be created
+    Built under assumptions that:
+        input contains N integers where N <= 1 000 000
+        T <= N
+    How to compile and run:
+        g++ sum.cpp -o sum
+        ./sum <file.txt> <T>
+        
+        
+        
+        
+        
+        
