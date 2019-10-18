@@ -92,7 +92,13 @@ Simple Operating System Projects in C/C++, implementing paging, CPU scheduling, 
     process -> resource
     process <- resource
     
+    How to compile and run:
+        g++ deadlock.cpp -o deadlock
+        ./deadlock <config.txt>
     
+9.  Page Replacement Algorithms
+
+    Check it's README.txt
     
     
     
