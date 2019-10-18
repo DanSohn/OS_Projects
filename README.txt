@@ -1,6 +1,6 @@
-# OS_Projects
+OS Projects
 
-Simple Operating System Projects in C/C++, implementing paging, CPU scheduling, and deadlock detection algorithms
+Simple Operating System projects and assignments in C/C++, implementing paging, CPU scheduling, and deadlock detection algorithms. The following states what each file does and how to compile and run them. Feel free to look around!
 
 1.  myWc.cpp
     Implementing a line count utility program that closely follows the performance of the 'wc' command in linux.
