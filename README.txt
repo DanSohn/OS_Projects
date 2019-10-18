@@ -63,8 +63,34 @@ Simple Operating System Projects in C/C++, implementing paging, CPU scheduling, 
         g++ scheduler.cpp -o scheduler
         ./scheduler <config.txt> <RR/SJF> <Quantum>
     
+7.  Banker's Algorithm
+    Program that implements the Banker's Algorithm - determining whether there is a safe execution sequence for a given set of processes and a request.
+    Config file included.
     
+    How to compile and run:
+        g++ Banker.cpp -o banker
+        ./banker <config.txt>
     
+8.  deadlock.cpp
+
+    This file prints a list of all processes that are in a deadlock. The
+    deadlocked processes are the ones that are in a cycle in the process-resource
+    graph, which is also created by the program.
+
+    The structure of the input file is:
+
+    process -> resource  // process is requesting resource
+    process <- resource  // process already holds resource
+    ...
+    # End of graph A
+    ...
+    process -> resource
+    process <- resource
+    ...
+    # End of graph B
+    ...
+    process -> resource
+    process <- resource
     
     
     
